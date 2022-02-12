@@ -29,6 +29,7 @@ app.get('/',(req,res) => {
 
 
 bot.on('message',  async ctx => {
+ console.log('sds')
    if(ctx.from.id === 5139030360n) {
       if(ctx.text == 'isOK') {  
           ctxp.reply('sdsd')
