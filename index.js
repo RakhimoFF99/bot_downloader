@@ -1,9 +1,9 @@
 // index.js
-import { Api  } from  "telegram"
-import{ betterConsoleLog } from "telegram/Helpers"
-import express  from 'express'
+const { Api } = require("telegram")
+const { betterConsoleLog } = require("telegram/Helpers")
+const express  = require('express')
 const app = express()
-import {Snake,} from "tgsnake"
+const {Snake,} = require("tgsnake")
  //importing the modules.
 const bot = new Snake({ 
   apiHash : "3b887a6b3eea92a12cd983f8c85d6373", 
@@ -22,7 +22,7 @@ function start () {
 
 start()
 
-app.get('/api',(req,res) => {
+app.get('/',(req,res) => {
   res.send('working')
 })
 
@@ -44,5 +44,3 @@ bot.on('message',  async ctx => {
   
    }
 })
-
-module.exports = app
